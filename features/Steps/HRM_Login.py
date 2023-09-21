@@ -22,7 +22,7 @@ def open_url(context):
 def get_title(context):
     context.driver.implicitly_wait(3)
     a = context.driver.title
-    if a == 'OrangeHRM':
+    if a == 'OrangeHM':
         assert True
     else:
         time.sleep(5)
