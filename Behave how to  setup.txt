@@ -1,0 +1,38 @@
+Install:
+Pip install behave
+Pip install selenium
+pip install allure-behave 
+
+
+now make a project and make below folders:
+
+feature/steps_folder (this will contain the python code to run scripts)
+feature/Login.feature 
+login.feature file data is below:
+Feature: OrangeHRM (What is going to be tested)
+  Scenario: Login title check (what component is being tested)
+    Given  launch browser (first step)
+    When  Open URL (When first is completed then second step)
+    Then  compare if the URL has been opened (step1)
+    And  close (step2)
+
+now run below command to get functions:
+behave features/login.feature
+
+
+now copy the code the system will print 
+
+now make a python file in the feature/steps_folder and a .py file and copy the code to make steps
+
+once steps are written then run below command to generate allure report
+behave -f allure_behave.formatter:AllureFormatter -o reports/ features
+
+
+
+commands for jenkins:
+python -m venv env
+call./venv/scripts/activate.bat
+pip install behave
+pip install selenium
+pip install allure-behave
+behave -f allure_behave.formatter:AllureFormatter -o reports/ features
